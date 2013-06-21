@@ -12,16 +12,16 @@
  (= (= 2 2/1))
 
  "You cannot generally float to heavens of integers"
- (=  (= 2 2.0))
+ (=  false (= 2 2.0))
 
  "But a looser equality is also possible"
- (= 4. (== 2.0 2))
+ (= true (== 2.0 2))
 
  "Something is not equal to nothing"
- (= 1 (not (= 1 nil)))
+ (= true (not (= 1 nil)))
 
  "Strings, and keywords, and symbols: oh my!"
- (= not (= "foo" :foo 'foo))
+ (= false (= "foo" ::foo))
 
  "Make a keyword with your keyboard"
  (= :foo (keyword foo))
